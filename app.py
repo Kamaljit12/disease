@@ -51,7 +51,7 @@ if option == 'Thyroid Prediction':
 
     
     age = st.select_slider("select Age", range(0, 100))
-    sex = st.selectbox("select Sex", options=(0, 10))
+    sex = st.selectbox("select Sex", options=(0, 1))
     on_thyorxine = st.selectbox("On Thyroxine", options=(0, 1))
     tsh = st.select_slider("TSH", range(0, 530))
     t3_measured = st.selectbox("T3 Measured", options=(0, 1))
