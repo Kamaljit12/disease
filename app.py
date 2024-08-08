@@ -40,13 +40,24 @@ option = st.sidebar.selectbox("Select an option",
 ## thyroid prediction with random forest
 if option == 'Thyroid Prediction':
 
-    age = st.number_input("Enter Age")
-    sex = st.number_input("Enter Sex")
-    on_thyorxine = st.number_input("On Thyroxine")
-    tsh = st.number_input("TSH")
-    t3_measured = st.number_input("T3 Measured")
-    t3 = st.number_input("T3")
-    tt4 = st.number_input("TT4")
+    # age = st.number_input("Enter Age")
+    # sex = st.number_input("Enter Sex")
+    # on_thyorxine = st.number_input("On Thyroxine")
+    # tsh = st.number_input("TSH")
+    # t3_measured = st.number_input("T3 Measured")
+    # t3 = st.number_input("T3")
+    # tt4 = st.number_input("TT4")
+
+
+    
+    age = st.select_slider("select Age", ragne(1, 100))
+    sex = st.select_slider("select Sex", range(0, 1))
+    on_thyorxine = st.select_slider("On Thyroxine", 0, 1)
+    tsh = st.select_slider("TSH", range(0, 530))
+    t3_measured = st.select_slider("T3 Measured", range(0, 1))
+    t3 = st.select_slider("T3", range(0, 11))
+    tt4 = st.select_slider("TT4", range(2, 430))
+    
 
     input_ls = [age, sex, on_thyorxine, tsh, t3_measured, t3, tt4]
     df = pd.DataFrame([input_ls], )
