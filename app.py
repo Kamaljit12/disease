@@ -62,7 +62,7 @@ if option == 'Thyroid Prediction':
     input_ls = [age, sex, on_thyorxine, tsh, t3_measured, t3, tt4]
     df = pd.DataFrame([input_ls], )
     df.columns = ['Age', 'Sex', "On Thyorxine", "TSH", "T3 Measured", "T3", "TT4"]
-    df
+    st dataframe(df)
 
     
     scaled_data =scaler.transform([input_ls])
